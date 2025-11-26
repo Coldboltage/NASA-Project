@@ -2,6 +2,7 @@ const request = require("supertest");
 const app = require("../../app");
 
 const { connectDB, disconnect } = require("../../utils/connect");
+const { loadPlanetsData } = require("../../models/planets.model");
 
 describe("Launches API", () => {
   beforeAll(async () => {
