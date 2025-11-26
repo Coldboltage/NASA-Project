@@ -6,6 +6,7 @@ const { connectDB, disconnect } = require("../../utils/connect");
 describe("Launches API", () => {
   beforeAll(async () => {
     await connectDB();
+    await loadPlanetsData();
   });
   afterAll(async () => {
     await disconnect();
